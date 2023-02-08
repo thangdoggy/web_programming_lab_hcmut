@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Dynamic table</title>
+  </head>
+
+  <body class="px-32">
+    <div class="flex justify-between text-white my-5">
+      <button
+        class="create bg-green-900 p-2 rounded-md hover:underline underline-offset-1"
+      >
+        Create new
+      </button>
+      <button
+        class="add-row bg-green-900 p-2 rounded-md hover:underline underline-offset-1"
+      >
+        Add row
+      </button>
+      <button
+        class="add-col bg-green-900 p-2 rounded-md hover:underline underline-offset-1"
+      >
+        Add column
+      </button>
+      <button
+        class="del-all bg-red-900 p-2 rounded-md hover:underline underline-offset-1"
+      >
+        Delete all
+      </button>
+
+      <button
+        class="del-row bg-red-900 p-2 rounded-md hover:underline underline-offset-1"
+      >
+        Delete row
+      </button>
+      <input
+        type="number"
+        name="row-del"
+        id="row-del"
+        placeholder="Row delete"
+        class="px-3 italic text-black w-16"
+      />
+
+      <button
+        class="del-col bg-red-900 p-2 rounded-md hover:underline underline-offset-1"
+      >
+        Delete column
+      </button>
+      <input
+        type="number"
+        name="col-del"
+        id="col-del"
+        placeholder="Col delete"
+        class="px-3 italic text-black w-16"
+      />
+      <button
+        class="edit bg-blue-900 p-2 rounded-md hover:underline underline-offset-1"
+      >
+        Edit table
+      </button>
+    </div>
+
+    <header class="text-center font-bold l my-5">
+      <h1 class="text-4xl">Student List</h1>
+      <h3>Course: Web Programming</h3>
+      <h3>Semester: 221</h3>
+      <h3>Class: L04</h3>
+    </header>
+
+    <!-- Tables section -->
+
+    <section id="table"></section>
+
+    <button
+      class="save float-right bg-yellow-500 text-white p-2 rounded-md hover:underline underline-offset-1"
+      style="display: none"
+    >
+      Save
+    </button>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

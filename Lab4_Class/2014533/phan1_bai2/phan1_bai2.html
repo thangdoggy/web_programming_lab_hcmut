@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage cookie</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="cname">Cookie name:</label>
+      <input type="text" name="cname" id="cname" /><br /><br />
+      <label for="cvalue">Cookie value:</label>
+      <input type="text" name="cvalue" id="cvalue" /><br /><br />
+      <label for="exdays">Expire days:</label>
+      <input type="number" name="exdays" id="exdays" /><br /><br />
+
+      <button onclick="listAllCookies()">View all cookies</button>
+      <button onclick="addCookie()">Add cookie</button>
+      <button onclick="editCookie()">Edit cookie</button>
+      <button onclick="deleteCookie()">Delete cookie</button>
+    </form>
+
+    <script>
+      const listAllCookies = () => {
+        const allCookies = document.cookie;
+        alert(allCookies);
+      };
+
+      const addCookie = () => {
+        const cname = document.getElementById("cname").value;
+        const cvalue = document.getElementById("cvalue").value;
+        const exdays = document.getElementById("exdays").value;
+
+        if (!cname || !cvalue || !exdays)
+          alert("Please fill in all field below");
+
+        const d = new Date();
+        d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+        let expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+      };
+
+      const editCookie = () => {
+        const cname = document.getElementById("cname").value;
+        const cvalue = document.getElementById("cvalue").value;
+        const exdays = document.getElementById("exdays").value;
+
+        if (!cname || !cvalue || !exdays)
+          return alert("Please fill in all field below");
+
+        !getCookie(cname) ? alert("Cookie name does not exists") : addCookie();
+      };
+
+      const deleteCookie = () => {
+        const cname = document.getElementById("cname").value;
+
+        if (!cname) return alert("Please fill in cookie name");
+
+        !getCookie(cname)
+          ? alert("Cookie name does not exists")
+          : setCookie(cname, "", {
+              "max-age": -1,
+            });
+      };
+
+      const getCookie = (cname) => {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(";");
+        for (let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == " ") {
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      };
+
+      function setCookie(name, value, options = {}) {
+        options = {
+          path: "/",
+          // add other default values if necessary
+          ...options,
+        };
+        if (options.expires instanceof Date) {
+          options.expires = options.expires.toUTCString();
+        }
+        let updatedCookie =
+          encodeURIComponent(name) + "=" + encodeURIComponent(value);
+        for (let optKey in options) {
+          updatedCookie += "; " + optKey;
+          let optValue = options[optKey];
+          if (optValue !== true) {
+            updatedCookie += "=" + optValue;
+          }
+        }
+        document.cookie = updatedCookie;
+      }
+    </script>
+  </body>
+</html>

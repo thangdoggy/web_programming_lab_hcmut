@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgb(163, 26, 26);
+  margin: 20px 0;
+}
+
+h1 {
+  text-shadow: 5px 3px rgb(51, 63, 228);
+}
+
+.logo {
+  border: 7px solid red;
+  border-radius: 20px;
+}
+
+body > div {
+  margin: 40px 40px 0 40px;
+}
+
+.about p::first-letter {
+  font-size: 50px;
+}
+
+.about p span {
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.about p span:last-child {
+  font-style: italic;
+  font-weight: normal;
+}
+
+.address ul,
+li {
+  line-height: 2;
+}
+
+.usa-city li:first-child,
+.usa-city li:first-child > a,
+.usa-city li:nth-child(3),
+.usa-city li:nth-child(3) > a,
+.world-city li:nth-child(2),
+.world-city li:nth-child(2) > a {
+  color: red;
+}
+
+.classes table,
+th,
+td {
+  border: 1px solid rgb(216, 216, 216);
+  border-collapse: collapse;
+  text-align: center;
+  padding: 8px 16px;
+}
+
+.social {
+  margin-bottom: 40px;
+}
+
+.social a:first-child {
+  color: rgb(38, 158, 118);
+  text-decoration: none;
+  font-weight: 900;
+  text-shadow: 2px 2px 4px #000;
+}

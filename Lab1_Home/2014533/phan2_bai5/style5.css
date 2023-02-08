@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-image: url(./images03/bg-body.png);
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  background-position-y: 0;
+  background-position-x: 50%;
+  background-color: #e8f7f9;
+}
+
+body {
+  width: 700px;
+  margin: auto;
+}
+
+.banner {
+  width: 100%;
+}
+
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  position: absolute;
+  color: darkgrey;
+  font-style: italic;
+  padding: 25px;
+}
+
+nav {
+  background-image: url(./images03/bg-menu.png);
+  background-size: cover;
+  height: 35px;
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding-left: 25px;
+}
+
+main {
+  display: flex;
+  height: 70vh;
+  padding-right: 10px;
+  background-color: #fff;
+}
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(233, 232, 232);
+  width: 30%;
+  height: 250px;
+  position: relative;
+  border-radius: 0 0 20px 20px;
+}
+
+.side-bar a {
+  text-decoration: none;
+  color: black;
+  line-height: 2;
+  padding-left: 5px;
+  border-bottom: 1px solid rgb(207, 207, 207);
+}
+
+.side-bar div {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.side-bar .feed {
+  width: 200px;
+}
+
+.side-bar .live-feed {
+  position: absolute;
+  width: 130px;
+}
+
+.content {
+  padding: 10px;
+  width: 70%;
+}
+
+.content .sponsor {
+  width: 100%;
+}
+
+.content h2 {
+  color: chartreuse;
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+.content .post-date {
+  color: grey;
+  letter-spacing: 1.2px;
+}
+
+.content p {
+  padding-bottom: 20px;
+}
+
+.content .comment {
+  display: flex;
+  align-items: center;
+  color: rgb(0, 211, 211);
+}
+
+.content .comment img {
+  padding-right: 5px;
+}
+
+footer {
+  background-image: url(./images03/bg-footer.jpg);
+  height: 90px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 60px;
+  padding-left: 25px;
+  color: white;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="my-11 mx-36">
+      <h1 class="font-bold text-5xl mb-11">Simple Calculator</h1>
+      <div class="add flex gap-5 items-center">
+        <input
+          type="number"
+          class="firstNumber border text-3xl w-1/6 h-11 bg-green-900 border-2 border-black text-white"
+        />
+        <div class="text-5xl font-bold text-green-900 w-11 text-center">+</div>
+        <input
+          type="number"
+          class="secondNumber border text-3xl w-1/6 h-11 bg-green-900 border-2 border-black text-white"
+        />
+        <button
+          class="border text-3xl font-bold w-11 h-11 bg-green-900 border-2 border-black text-white"
+          onclick="add()"
+        >
+          =
+        </button>
+        <div
+          class="result-add text-5xl font-bold text-green-900 w-11 text-center"
+        ></div>
+      </div>
+
+      <div class="sub flex gap-5 items-center">
+        <input
+          type="number"
+          class="firstNumber border text-3xl w-1/6 h-11 bg-green-900 border-2 border-black text-white"
+        />
+        <div class="text-5xl font-bold text-green-900 w-11 text-center">-</div>
+        <input
+          type="number"
+          class="secondNumber border text-3xl w-1/6 h-11 bg-green-900 border-2 border-black text-white"
+        />
+        <button
+          class="border text-3xl font-bold w-11 h-11 bg-green-900 border-2 border-black text-white"
+          onclick="sub()"
+        >
+          =
+        </button>
+        <div
+          class="result-sub text-5xl font-bold text-green-900 w-11 text-center"
+        ></div>
+      </div>
+
+      <div class="multiply flex gap-5 items-center">
+        <input
+          type="number"
+          class="firstNumber border text-3xl w-1/6 h-11 bg-green-900 border-2 border-black text-white"
+        />
+        <div class="text-5xl font-bold text-green-900 w-11 text-center">*</div>
+        <input
+          type="number"
+          class="secondNumber border text-3xl w-1/6 h-11 bg-green-900 border-2 border-black text-white"
+        />
+        <button
+          class="border text-3xl font-bold w-11 h-11 bg-green-900 border-2 border-black text-white"
+          onclick="mul()"
+        >
+          =
+        </button>
+        <div
+          class="result-mul text-5xl font-bold text-green-900 w-11 text-center"
+        ></div>
+      </div>
+
+      <div class="division flex gap-5 items-center">
+        <input
+          type="number"
+          class="firstNumber border text-3xl w-1/6 h-11 bg-green-900 border-2 border-black text-white"
+        />
+        <div class="text-5xl font-bold text-green-900 w-11 text-center">/</div>
+        <input
+          type="number"
+          class="secondNumber border text-3xl w-1/6 h-11 bg-green-900 border-2 border-black text-white"
+        />
+        <button
+          class="border text-3xl font-bold w-11 h-11 bg-green-900 border-2 border-black text-white"
+          onclick="div()"
+        >
+          =
+        </button>
+        <div
+          class="result-div text-5xl font-bold text-green-900 w-11 text-center"
+        ></div>
+      </div>
+
+      <div class="pow flex gap-5 items-center">
+        <input
+          type="number"
+          class="firstNumber border text-3xl w-1/6 h-11 bg-green-900 border-2 border-black text-white"
+        />
+        <div class="text-5xl font-bold text-green-900 w-11 text-center">^</div>
+        <input
+          type="number"
+          class="secondNumber border text-3xl w-1/6 h-11 bg-green-900 border-2 border-black text-white"
+        />
+        <button
+          class="border text-3xl font-bold w-11 h-11 bg-green-900 border-2 border-black text-white"
+          onclick="pow()"
+        >
+          =
+        </button>
+        <div
+          class="result-pow text-5xl font-bold text-green-900 w-11 text-center"
+        ></div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
